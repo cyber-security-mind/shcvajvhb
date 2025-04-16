@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prototype</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <header>
+      <aside class="slidebar fade-in">
+
+        <div class="left">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_kG60sDtQJsoR2QYdMzci7sfmT5Zzssdg8w&s" alt="" 
+             width="40px" height="40px">
+            <a class="a" href="#p">F</a>
+            <a class="a" href="#r">I</a>
+            <a class="a" href="#r">R</a>
+            <a class="a" href="#r">S</a>
+            <a class="a" href="#r">T</a>
+        </div>
+
+        <div class="right">
+            <div class="right-inner">
+                <div class="header">
+                    <div>
+                        <h2>Навігація</h2>
+                        <h3>розділи сайту</h3>
+                    </div>
+                </div>
+                <nav>
+                    <a class="a" href="#a"> 
+                        <span>Головна</span>
+                    </a>
+                    <a class="a" href="#b"> 
+                        <span>Каталог:</span>
+                    </a>
+
+                    <ul class="submenu">
+                        <li>
+                            <a href="#r">Жіночий одяг</a>
+                            <span class="badge">10</span>
+                        </li>
+                        <li>
+                            <a href="#f">Чоловічий одяг</a>
+                            <span class="badge">18</span>
+                        </li>
+                        <li>
+                            <a href="#f">Взуття</a>
+                            <span class="badge">4</span>
+                        </li>
+                        <li>
+                            <a href="#f">Асесуари</a>
+                            <span class="badge">7</span>
+                        </li>
+                    </ul>
+
+                    <a class="a" href="#a"> 
+                        <span>контакти</span>
+                    </a>
+
+                    <a class="a" href="#b"> 
+                        <span>Доставка / оплата</span>
+                    </a>
+
+                    <a class="a" href="#b"> 
+                        <span>Особистий кабінет</span>
+                    </a>
+
+                    <a class="a" href="#b"> 
+                        <span>Відгуки :)</span>
+                    </a>
+                </nav>
+            </div>
+        </div>
+      </aside>
+
+      <button class="menu-btn" onclick="toggleMenu()">☰</button>
+
+      <div class="sidebar" id="sidebar">
+        <nav>
+          <a class="head-nav" href="index.html">головна</a>
+          <a class="main-nav" href="#contacts">контакти</a>
+          <a class="main-nav" href="#page">кабінет</a>
+          <a class="main-nav" href="#action">акції</a>
+          <h2 id="catalog" class="head-nav">каталог:</h2>
+          <div>
+             <a class="li-nav" href="#M-swear">Жіночий одяг<span>10</span></a>
+             <a class="li-nav" href="#W-swear">Чоловічий одяг<span>15</span></a>
+             <a class="li-nav" href="#footwesr">Взуття<span>7</span></a>
+             <a class="li-nav" href="#accessories">Аксесуари<span>5</span></a>
+          </div>
+          <h2 class="head-nav">інше:</h2>
+          <a class="main-nav" href="#payment">доставка / оплата</a>
+          <a class="main-nav" href="#reviews">відгуки</a>
+        </nav>
+       </div>
+        
+       <script>
+        function toggleMenu() {
+            let sidebar = document.getElementById("sidebar");
+            if (sidebar.style.left === "0px") {
+                sidebar.style.left = "-350px";
+            } else {
+                sidebar.style.left = "0px";
+            }
+        }
+      </script>
+
+     <script>
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+            } else {
+              entry.target.classList.remove('visible');
+            }
+          });
+         });
+      
+         const fadeEl = document.querySelector('.fade-in');
+         observer.observe(fadeEl);
+     </script>
+    </header>
+
+    <main>
+        <section class="main">
+
+            <div class="sticky">
+                <h1>Always First | <span>+</span></h1>
+
+                <div class="sticky-img"></div>
+
+                <nav>
+                    <a href="#catalog">каталог</a>
+                    <a href="#reviews">відгуки</a>
+                    <a href="#page">кабінет</a>
+                </nav>
+            </div>
+
+            <article class="article-head">
+            </article>
+
+            <div class="aa"></div>
+
+        </section>
+    </main>
+      
+    
+</body>
+</html>

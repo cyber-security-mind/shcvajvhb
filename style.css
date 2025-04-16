@@ -194,6 +194,7 @@ main{
 .slidebar .right .a:hover{
     background: #f7f7f7;
     transform: translateX(10px);
+    color: red;
 }
 
 .slidebar:hover{
@@ -276,6 +277,7 @@ main{
     display: block;
     color: white;
     text-decoration: none;
+    transition: all 0.3s ease;
 }
 
 .sidebar nav .head-nav{
@@ -315,6 +317,10 @@ main{
     margin: 15px 10px;
     border-left: 1.5px solid #757575;
     padding-left: 10px;
+}
+
+.sidebar a:hover{
+    color: red;
 }
 
 .sidebar nav .li-nav span{
@@ -403,8 +409,9 @@ main{
         z-index: 2;
     }
 
-    .sticky{
-        flex-wrap: wrap;
+    .sticky {
+        width: 100%;
+        border-radius: 0 0 0 0;
     }
 
     .sticky h1{
